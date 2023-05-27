@@ -138,6 +138,35 @@ body {
     .submain-two-form-footer-h4 {
         font-size: 1.3rem;
     }
+
+    .submain-two-form-select {
+        background-color: white;
+        border: none;
+        border-bottom: 2px solid #C17754;
+        border-radius: 0;
+    }
+
+    .submain-two-form-select {
+        border: none;
+        border-bottom: 2px solid #C17754;
+        width: 100%;
+        margin-top: 4rem;
+        opacity: 0.6;
+        background-color: white;
+    }
+
+    .submain-two-form-select:hover {
+        border: none;
+        border-bottom: 2px solid #e3500c;
+    }
+
+    .submain-two-form-select:focus {
+        border: none;
+    }
+
+    .submain-two-form-select:active {
+        border: none;
+    }
 }
 
 @media only screen and (min-width: 750.01px) and (max-width: 1000px) {
@@ -181,6 +210,7 @@ body {
 
     .submain-two-form-select {
         margin-top: 6rem;
+        background-color: white;
     }
 
     .submain-two-form-button {
@@ -204,13 +234,32 @@ body {
     .submain-two-form-button {
         font-size: 1.5rem;
     }
+
+    .submain-two-form-select {
+        border: none;
+        border-bottom: 2px solid #C17754;
+        width: 100%;
+        margin-top: 4rem;
+        opacity: 0.6;
+        background-color: white;
+    }
+
+    .submain-two-form-select:hover {
+        border: none;
+        border-bottom: 2px solid #e3500c;
+    }
+
+    .submain-two-form-select:focus {
+        border: none;
+    }
+
+    .submain-two-form-select:active {
+        border: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1000.01px) and (max-width: 1279.9px) {
-    .submain-one {
-        
-    }
 
     .submain-one-image-cover {
         width: 100%;
@@ -228,7 +277,7 @@ body {
         margin: 0;
     }
 
-    .submain-two-form{
+    .submain-two-form {
         margin: 10% auto;
     }
 

@@ -1,6 +1,7 @@
 
 # **CountryRegionJS Angular Demo**
 This repo contains a demo for how you can implement the [countryregionjs](https://www.npmjs.com/package/countryregionjs) library in your angular application
+Live URL: https://countryregionjs-angular.netlify.app/
 
 Feel free to check out the [CountryRegionJS Repository](https://github.com/king-Alex-d-great/CountryRegionJS) 
 

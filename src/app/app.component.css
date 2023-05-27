@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #C17754;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.submain {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    height: 90vh;
+    margin: 2rem auto;
+}
+
+.submain-one-image-cover {
+    width: 100%;
+    height: 739px;
+    border-radius: 10px;
+}
+
+.submain-two {
+    width: 466px;
+    height: 80%;
+    margin: 15rem 8rem;
+}
+
+.submain-two-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.submain-two-form-header > h1 {
+    font-size: 5rem;
+    line-height: 45px;
+    text-align: start;
+}
+
+.submain-two-form-body {
+    margin-top: 2rem;
+}
+
+.submain-two-form-select {
+    border: none;
+    border-bottom: 2px solid #C17754;
+    width: 100%;
+    margin-top: 4rem;
+    opacity: 0.6;
+}
+
+.submain-two-form-select:hover {
+    border: none;
+    border-bottom: 2px solid #e3500c;
+}
+
+.submain-two-form-select:focus {
+    border: none;
+}
+
+.submain-two-form-select:active {
+    border: none;
+}
+
+.submain-two-form-button {
+    width: 100%;
+    background: linear-gradient(90.58deg, #DB844E 0%, #C17754 99.87%, #C17754 99.88%);
+    border-radius: 5px;
+    margin-top: 3.5rem;
+    padding: 1.1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    border: none;
+}
+
+.submain-two-form-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+.submain-two-form-footer-h4 {
+    opacity: 0.9;
+}
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 750px) {
+    .submain {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 5%;
+        margin: 0;
+    }
+
+    .submain-one {
+        width: 100%;
+    }
+
+    .submain-one-image-cover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .submain-one-image {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: #C17754;
+    }
+
+    .submain-two {
+        margin: 10% auto;
+        width: 100%;
+    }
+
+    .submain-two-form-header > h1 {
+        font-size: 3rem;
+        /* text-align: center; */
+    }
+
+    .submain-two-form-body {
+        margin-top: 0;
+    }
+
+    .submain-two-form-footer-h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 750.01px) and (max-width: 1000px) {
+    main {
+        font-size: 20px;
+    }
+
+    .submain-two-form-header > h1 {
+        font-size: 3.2em;
+    }
+
+    .submain {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 5%;
+        margin: 0;
+    }
+
+    .submain-one {
+        width: 100%;
+    }
+
+    .submain-one-image-cover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .submain-one-image {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: #C17754;
+    }
+
+    .submain-two {
+        margin: 10% auto;
+        width: 100%;
+    }
+
+    .submain-two-form-select {
+        margin-top: 6rem;
+    }
+
+    .submain-two-form-button {
+        margin-top: 4.5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 321px) {
+    main {
+        font-size: 10px;
+    }
+
+    .submain-two-form-header > h1 {
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .submain-two-form-button {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1000.01px) and (max-width: 1279.9px) {
+    .submain-one {
+        
+    }
+
+    .submain-one-image-cover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .submain-one-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .submain-two {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .submain-two-form{
+        margin: 10% auto;
+    }
+
+    .submain-two-form-footer {
+        display: none;
+    }
+}

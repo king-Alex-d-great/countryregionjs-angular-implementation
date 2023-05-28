@@ -11,9 +11,13 @@ import { ApiResponse } from 'src/models';
 })
 export class AppComponent implements OnInit {
   countryForm: FormGroup;
+  countryRegion: any = null;
+
   countries: CountryRegionResponse[] = [];
   states: CountryRegionResponse[] = [];
   lgas: CountryRegionResponse[] = [];
+
+  ONE: number = 1;
 
   constructor() {
     this.countryForm = new FormGroup({
@@ -27,14 +31,18 @@ export class AppComponent implements OnInit {
     this.getCountries();
   }
 
+  getCountryRegionInstance = () =>
+    this.countryRegion ??= new CountryRegion();
+
   async getCountries(): Promise<void> {
     try {
-      const countryRegion = new CountryRegion();
-      const countries = await countryRegion.getCountries();
+      const countries = await this.getCountryRegionInstance()?.getCountries();
+
       this.countries = countries.map((country: ApiResponse, index: number) => ({
-        value: index + 1,
-        label: country.name
+        value: index + this.ONE,
+        label: country.name,
       }));
+
     } catch (error) {
       console.error(error);
     }
@@ -42,15 +50,16 @@ export class AppComponent implements OnInit {
 
   async getStates(): Promise<void> {
     try {
-      const countryRegion = new CountryRegion();
       const country = this.countryForm.get('country')?.value;
+
       if (country) {
-        const states = await countryRegion.getStates(country);
+        const states = await this.getCountryRegionInstance()?.getStates(country);
         this.states = states.map((userState: ApiResponse, index: number) => ({
-          value: index + 1,
+          value: index + this.ONE,
           label: userState?.name
         }));
       }
+
     } catch (error) {
       console.error(error);
     }
@@ -58,13 +67,13 @@ export class AppComponent implements OnInit {
 
   async getLGAs(): Promise<void> {
     try {
-      const countryRegion = new CountryRegion();
       const country = this.countryForm.get('country')?.value;
       const state = this.countryForm.get('state')?.value;
+
       if (country && state) {
-        const lgas = await countryRegion.getLGAs(country, state);
+        const lgas = await this.getCountryRegionInstance()?.getLGAs(country, state);
         this.lgas = lgas?.map((lga: ApiResponse, index: number) => ({
-          value: index + 1,
+          value: index + this.ONE,
           label: lga?.name
         }));
       }
